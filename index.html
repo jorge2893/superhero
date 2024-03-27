@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="" author="">
+    <meta name="Superhero" author="Jorge Solis San Martin">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- CANVAS JS -->
+    <script defer src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     <!-- js -->
     <script defer src="./assets/js/scripts.js"></script>
     <!-- jquery -->
@@ -26,7 +28,39 @@
 </head>
 
 <body>
-
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <!-- achicar imagen titulo -->
+            <a class="navbar-brand" href="#"><img src="" alt="">SuperHero</a>
+        </div>
+    </nav>
 </body>
+<main>
+    <section>
+        <div class=" d-flex justify-content-center py-5">
+            <img src="./assets/img/sh1.jpg" alt="">
+        </div>
+        <div>
+            <h1 class="px-5">
+                Encuentra tu SuperHero
+            </h1>
+            <section id="databook" class="d-flex justify-content-between py-5 px-5">
+                <form id="searchhero" class="formhero">
+                    <div>
+                        <label for="SuperHero" class="form-label fw-bold my-3">Ingresa el número del SuperHero a buscar</label>
+                        <input type="text" class="form-control my-3" name="SuperHero" id="SuperHero" required>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary my-2">Buscar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+
+            
+        
+    </section>
+</main>
 
 </html>
