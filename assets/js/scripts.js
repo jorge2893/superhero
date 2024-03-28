@@ -15,13 +15,37 @@ $(function () {
     });
 
     function getHero(idOrName) {
-        let urlBase = "https://superheroapi.com/api/access-token/character-id" + idOrName;
+        let urlBase = "https://www.superheroapi.com/api.php/4905856019427443/" + idOrName;
         $.ajax({
             method: "GET",
             url: urlBase,
             dataType: "json"
-        });
-    }
+        }).done(function(response){
+
+            console.log(response);
+            renderData(response)
+
+            // let herovillain = {
+            //     id: response.id,
+            //     name: response.name,
+            //     image: response.sprites.front_default,
+                
+            // }
+        })
+
+    };
+    const renderData = (response) =>{
+        if(response == undefined || response == null){
+            alert('No se encontraron datos');
+            return;
+        }
+
+    dataGraphe(response);
+
+        $('#card-title').text(`Nombre: ${response.name}`);
+        $('#card-img').attr('src', response.image.url);
+        $('#card-info').text(response.connections['group-affiliation']);
+    };
 
 
 

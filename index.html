@@ -28,39 +28,65 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container">
-            <!-- achicar imagen titulo -->
-            <a class="navbar-brand" href="#"><img src="" alt="">SuperHero</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+                <!-- achicar imagen titulo -->
+                <a class="navbar-brand" href="#"><img src="" alt="">SuperHero</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class=" d-flex justify-content-center py-5">
+                <img src="./assets/img/sh1.jpg" alt="">
+            </div>
+            <div>
+                <h1 class="px-5">
+                    Encuentra tu SuperHero
+                </h1>
+                <section id="databook" class="d-flex justify-content-between py-5 px-5">
+                    <form id="searchhero" class="formhero">
+                        <div>
+                            <label for="SuperHero" class="form-label fw-bold my-3">Ingresa el número del SuperHero a
+                                buscar</label>
+                            <input type="text" class="form-control my-3" name="SuperHero" id="SuperHero" required>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary my-2">Buscar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img id="card-img" src="..." class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 id="card-title" class="card-title">Card title</h5>
+                    <p id="card-info" class="card-text">This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <p id="card-info-1" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                    <p id="card-info-2" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                    <p id="card-info-3" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                    <p id="card-info-4" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                    <p id="card-info-5" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                    <p id="card-info-6" class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                            ago</small></p>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
 </body>
-<main>
-    <section>
-        <div class=" d-flex justify-content-center py-5">
-            <img src="./assets/img/sh1.jpg" alt="">
-        </div>
-        <div>
-            <h1 class="px-5">
-                Encuentra tu SuperHero
-            </h1>
-            <section id="databook" class="d-flex justify-content-between py-5 px-5">
-                <form id="searchhero" class="formhero">
-                    <div>
-                        <label for="SuperHero" class="form-label fw-bold my-3">Ingresa el número del SuperHero a buscar</label>
-                        <input type="text" class="form-control my-3" name="SuperHero" id="SuperHero" required>
-                    </div>
-                    <div>
-                        <button class="btn btn-primary my-2">Buscar</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-        
-
-            
-        
-    </section>
-</main>
 
 </html>
