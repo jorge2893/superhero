@@ -36,18 +36,44 @@ $(function () {
         dataGraphe(response);
         
         
-        
+        let listhtml = '<ul>';
+        listhtml += `<li>Nombre real es: ${response.biography['full-name']} </li>`;
+        listhtml += `<li>Alter ego: ${response.biography['alter-egos']} </li>`;
+        listhtml += `<li>Alias: ${response.biography.aliases} </li>`;
+        listhtml += `<li>Lugar de Nacimiento: ${response.biography['place-of-birth']} </li>`;
+        listhtml += `<li>Primera aparicion: ${response.biography['first-appearance']} </li>`;
+        listhtml += `<li>Editorial: ${response.biography.publisher} </li>`;
+        listhtml += `<li>Alineacion: ${response.biography.alignment} </li>`;
+        listhtml += '</ul>';
+
+        let listappearance = '<ul>';
+        listappearance += `<li>Genero: ${response.appearance.gender} </li>`;
+        listappearance += `<li>Raza: ${response.appearance.race} </li>`;
+        listappearance += `<li>Altura: ${response.appearance.height} </li>`;
+        listappearance += `<li>Peso: ${response.appearance.weight} </li>`;
+        listappearance += `<li>Color de ojos: ${response.appearance['eye-color']} </li>`;
+        listappearance += `<li>Color de cabello: ${response.appearance['hair-color']} </li>`;
+        listappearance += '</ul>'
+
+        let listwork = '<ul>';
+        listwork += `<li>Trabajo: ${response.work.occupation} </li>`;
+        listwork += `<li>Base: ${response.work.base} </li>`;
+        listwork += '</ul>';
+
+        let listconnections = '<ul>';
+        listconnections += `<li>Grupo afiliado: ${response.connections['group-affiliation']} </li>`;
+        listconnections += `<li>Parentesco: ${response.connections.relatives} </li>`;
+        listconnections += '</ul>';
+
+
         $('#card-title').text(`Nombre: ${response.name}`);
         $('#card-img').attr('src', response.image.url);
-        $('#card-info').text(`Publicado por: ${response.biography.publisher}`);
-        $('#card-info-1').text(response.connections['group-affiliation']);
-        $('#card-info-2').text(`Ocupación: ${response.work.occupation}`);
-        $('#card-info-3').text(`Primera aparición: ${response.biography['first-appearance']}`);
-        $('#card-info-4').text(`Altura: ${response.appearance.height}`);
-        $('#card-info-5').text(`Peso: ${response.appearance.weight}`);
-        $('#card-info-6').text(`Alianzas: ${response.connections['group-affiliation']}`);
-        
-    };
+        $('#card-info').html(listhtml);
+        $('#card-info-1').html(listappearance);
+        $('#card-info-2').html(listwork);
+        $('#card-info-3').html(listconnections);
+
+    }
     
     const dataGraphe = (response) => {
         let { powerstats: stats } = response;
