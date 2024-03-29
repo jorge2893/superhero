@@ -1,11 +1,16 @@
-.formhero {
-    flex-basis: 400px;
-}
-
-;
-
 body {
-    background-image: url(assets\img\4845746.jpg);
+    background-image: url("/assets/img/4845746.jpg");
     background-size: cover;
     background-position: center;
+    margin: 0px;
+    padding: 0px;
+    };
+
+.formhero {
+    flex-basis: 400px;
+};
+
+footer{
+    position: fixed;
+    width: 100%;
 };
