@@ -7,7 +7,6 @@ $(function () {
         let idOrName = $("#SuperHero").val();
         
         if (regexValidacion.test(idOrName) && idOrName < 732 && idOrName > 0) {
-            //SI ID OR NOMBR ES VÁLIDO
             getHero(idOrName);
         } else {
             return alert("El número ingresado no es valido");
