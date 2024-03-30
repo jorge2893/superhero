@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Superhero" author="Jorge Solis San Martin">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Descubre tu SuperHero">
+    <meta name="keywords" content="Superhero, Estadisticas, Biografia, Apariencia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- styles -->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -31,9 +31,12 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container">
-        
-                <a class="navbar-brand" href="#"><img class="mx-1" src="./assets/img/favicon-32x32.png" alt="">SuperHero</a>
+                <a class="navbar-brand" href="#"><img class="mx-1" src="./assets/img/foter.png" alt="">SuperHero</a>
             </div>
+            <form class="d-flex">
+                <a class="btn btn-outline-success" href="https://www.superheroapi.com/ids.html" target="_blank">Index
+                    Hero</a>
+            </form>
         </nav>
     </header>
     <main class="container">
@@ -42,18 +45,19 @@
                 <img src="./assets/img/sh1-fotor-bg-remover-2024032821289.png" alt="">
             </div>
             <div>
-                <h1 class="px-5">
+                <h1 class="px-5 text-white">
                     Encuentra tu SuperHero
                 </h1>
                 <section id="databook" class="d-flex justify-content-between py-5 px-5">
                     <form id="searchhero" class="formhero">
                         <div>
-                            <label for="SuperHero" class="form-label fw-bold my-3">Ingresa el número del SuperHero a
+                            <label for="SuperHero" class="form-label fw-bold my-3 text-white">Ingresa el número del
+                                SuperHero a
                                 buscar</label>
                             <input type="text" class="form-control my-3" name="SuperHero" id="SuperHero" required>
                         </div>
                         <div>
-                            <button class="btn btn-primary my-2">Buscar</button>
+                            <button class="btn btn-danger my-2">Buscar</button>
                         </div>
                     </form>
                 </section>
@@ -68,12 +72,12 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body">
-                        <h5 id="card-title" class="card-title"></h5>
+                        <h5 id="card-title" class="card-title text-white"></h5>
                         <div class="container">
                             <div>
                                 <span class="d-flex">
                                     <div>
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseWidthExample1" aria-expanded="false"
                                             aria-controls="collapseWidthExample1">
                                             Biografia
@@ -93,7 +97,7 @@
                             <div>
                                 <span class="d-flex bg-transparent border-0">
                                     <div>
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseWidthExample2" aria-expanded="false"
                                             aria-controls="collapseWidthExample2">
                                             Apariencia
@@ -115,7 +119,7 @@
                             <div>
                                 <span class="d-flex">
                                     <div>
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseWidthExample3" aria-expanded="false"
                                             aria-controls="collapseWidthExample3">
                                             Trabajo
@@ -137,7 +141,7 @@
                             <div>
                                 <span class="d-flex">
                                     <div>
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseWidthExample4" aria-expanded="false"
                                             aria-controls="collapseWidthExample4">
                                             Conexiones
@@ -162,13 +166,31 @@
         </div>
         <div id="graphContainer" class="col-lg-6">
         </div>
-</section>
-<footer class="bg-dark  py-5">
-    <div>
-        <img class="justify-content-center" src="./assets/img/favicon-32x32.png" alt="">
-    </div>
-</footer>
-
+    </section>
+    <section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalBody"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer mt-auto py-2">
+        <div class="footer-image-logo">
+            <img src="./assets/img/foter.png" alt="">
+            <p>SuperHero 2024</p>
+        </div>
+    </footer>
 </body>
 
 </html>

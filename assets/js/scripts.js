@@ -10,7 +10,7 @@ $(function () {
             getHero(idOrName);
             $('#oculto').removeClass('d-none');
         } else {
-            return alert("El número ingresado no es valido");
+            failRegex(idOrName);
         };
     });
 
@@ -140,13 +140,14 @@ $(function () {
 
         console.log(pj);
         return pj
-        // powerstats
-        // : 
-        // {intelligence: '38', strength: '100', speed: '17', durability: '80', power: '24', …}
     }
-
-
-
+    const failRegex = (idOrName) => {
+        $('#modalLabel').text(`El Heroe con id: ${idOrName} no existe`);
+        $('#exampleModal').modal('show');
+        $('#modalBody').text(`Por favor introduce un ID numérico valido y menor a 732`);
+        $('#pokeName').val('');
+        console.log('Error al capturar datos por fracaso de validacion en regex ')
+    };
 });
 
 
