@@ -48,8 +48,8 @@ $(function () {
         let listappearance = '<ul>';
         listappearance += `<li>Genero: ${response.appearance.gender} </li>`;
         listappearance += `<li>Raza: ${response.appearance.race} </li>`;
-        listappearance += `<li>Altura: ${response.appearance.height[0]} - ${response.appearance.height[1]}  </li>`;
-        listappearance += `<li>Peso: ${response.appearance.weight[0]} - ${response.appearance.weight[1]} </li>`;
+        listappearance += `<li>Altura: ${response.appearance.height[1]}  </li>`;
+        listappearance += `<li>Peso: ${response.appearance.weight[1]} </li>`;
         listappearance += `<li>Color de ojos: ${response.appearance['eye-color']} </li>`;
         listappearance += `<li>Color de cabello: ${response.appearance['hair-color']} </li>`;
         listappearance += '</ul>'
@@ -116,21 +116,21 @@ $(function () {
     function validarDatos(pj) {
         pj.biography['full-name'] == "null" ? pj.biography['full-name'] = 'Sin Nombre' : false;
         pj.biography['alter-egos'] == "null" ? pj.biography['alter-egos'] = 'Sin Alterego' : false;
-        pj.biography.aliases == "null" ? pj.biography.aliases = 'Sin alias' : false;
-        pj.biography['place-of-birth'] == "null" ? pj.biography['place-of-birth'] = 'Sin Fecha conocida' : false;
+        pj.biography.aliases == "-" ? pj.biography.aliases = 'Sin alias' : false;
+        pj.biography['place-of-birth'] == "-" ? pj.biography['place-of-birth'] = 'Sin Fecha conocida' : false;
         pj.biography['first-appearance'] == "null" ? pj.biography['first-appearance'] = 'Desconocido' : false;
         pj.biography.publisher == "null" ? pj.biography.publisher = 'Sin Editorial' : false;
         pj.biography.alignment == "null" ? pj.biography.alignment = 'Desconocido' : false;
         pj.appearance.gender == "null" ? pj.appearance.gender = 'Desconocido': false;
         pj.appearance.race == "null" ? pj.appearance.race = 'Sin raza' : false;
-        pj.appearance.height == "null" ? pj.appearance.height = 'Desconocido': false;
-        pj.appearance.weight == "null" ? pj.appearance.weight = 'Desconocido': false;
+        pj.appearance.height == "0" ? pj.appearance.height[1] = 'Desconocido': false;
+        pj.appearance.weight == "0" ? pj.appearance.weight[1] = 'Desconocido': false;
         pj.appearance['eye-color'] == "null" ? pj.appearance['eye-color'] = 'Desconocido': false;
         pj.appearance['hair-color'] == "null" ? pj.appearance['hair-color'] = 'Desconocido': false;
         pj.work.occupation == "null" ? pj.work.occupation = 'Sin ocupacion': false;
         pj.work.base == "-" ? pj.work.base = 'Sin trabajo': false;
-        pj.connections['group-affiliation'] == "null" ? pj.connections['group-affiliation'] = 'Sin grupo': false;
-        pj.connections.relatives == "null" ? pj.connections.relatives = 'Desconocido': false;   
+        pj.connections['group-affiliation'] == "-" ? pj.connections['group-affiliation'] = 'Sin grupo': false;
+        pj.connections.relatives == "-" ? pj.connections.relatives = 'Desconocido': false;   
         pj.powerstats.intelligence == "null" ? pj.powerstats.intelligence = '1' : false;
         pj.powerstats.strength == "null" ? pj.powerstats.strength = '1': false;
         pj.powerstats.speed == "null" ? pj.powerstats.speed = '1': false;
