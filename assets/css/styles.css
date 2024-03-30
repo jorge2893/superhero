@@ -1,16 +1,27 @@
 body {
     background-image: url("/assets/img/4845746.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: relative;
     margin: 0px;
-    padding: 0px;
-    };
+    padding-bottom: 3em;
+
+    min-height: 100vh
+}
+
+;
 
 .formhero {
     flex-basis: 400px;
-};
+}
 
-footer{
-    position: fixed;
+;
+
+footer {
+    background-color: black;
+    padding: 1em 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-};
+  
+}
